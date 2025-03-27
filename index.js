@@ -13,6 +13,7 @@ app.get("/steamprice", async (req, res) => {
   const encoded = encodeURIComponent(itemName);
   const steamURL = `https://steamcommunity.com/market/priceoverview/?appid=730&currency=2&market_hash_name=${encoded}`;
 
+
   try {
     const response = await fetch(steamURL);
     const data = await response.json();
